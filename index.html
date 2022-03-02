@@ -1,9 +1,9 @@
 <script src="https://docs.getgrist.com/grist-plugin-api.js"></script>
-<img id="image" src=""/>
-<div id="title"></div>
+<div id="name"></div>
+<div id="missing"></div>
 <script>
   grist.ready({requiredAccess: 'read table'});
   grist.onRecord(function (record) {
-    grist.ready({columns: ['Name','Missing_Parts']});
+    grist.ready({columns: ['Name','Missing']});
   });
 </script>
