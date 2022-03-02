@@ -4,7 +4,6 @@
 <script>
   grist.ready({requiredAccess: 'read table'});
   grist.onRecord(function (record) {
-    document.getElementById('image').src = record.Link;
-    document.getElementById('title').innerText = record.Title;
+    grist.ready({columns: ['Name','Missing_Parts']});
   });
 </script>
