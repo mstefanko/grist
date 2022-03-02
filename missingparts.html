@@ -2,8 +2,8 @@
 <div id="name"></div>
 <div id="missing"></div>
 <script>
-  grist.ready({requiredAccess: 'read table'});
-  grist.onRecord(function (record) {
-    grist.ready({columns: ['Name','Missing']});
+  grist.ready();
+  grist.onRecords(function(records) {
+    document.getElementById('readout').innerHTML = JSON.stringify(records, null, 2);
   });
 </script>
